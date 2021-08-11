@@ -1,0 +1,12 @@
+title: Gallery file
+
+accept: image/*, video/*
+
+options:
+  delete:
+    *: true
+  replace:
+    *: true
+  update:
+    *: true
+  sortable: true

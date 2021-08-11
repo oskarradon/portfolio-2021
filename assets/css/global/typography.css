@@ -1,0 +1,102 @@
+/* font face declarations */
+
+@font-face {
+  font-family: "Untitled Sans";
+  src: url("/assets/fonts/untitled-sans-web-regular.eot"); /* IE9 Compat Modes */
+  src: url("/assets/fonts/untitled-sans-web-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/untitled-sans-web-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("/assets/fonts/untitled-sans-web-regular.woff") format("woff"); /* Pretty Modern Browsers */
+}
+
+/* type styles */
+
+html {
+  color: var(--text1);
+  background: var(--bg);
+}
+
+a,
+a:visited,
+a:focus {
+  color: var(--text1);
+  /* color: var(--text-link); */
+}
+
+a {
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-bottom: 2px dotted var(--text-link);
+  cursor: pointer;
+}
+
+body {
+  font-family: "Untitled Sans", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.286em;
+}
+
+p {
+  margin-top: 0;
+  max-width: 440px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 2em;
+}
+
+h3 {
+  font-size: 0.7em;
+  margin-bottom: 0.6em;
+}
+
+/* media queries */
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+    line-height: 1.4em;
+  }
+
+  p {
+    max-width: 580px;
+  }
+}
+
+@media (min-width: 1000px) {
+  dl {
+    grid-template-columns: 100px 1fr;
+  }
+
+  body {
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+
+  p {
+    max-width: 700px;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text1);
+}

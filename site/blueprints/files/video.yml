@@ -1,0 +1,12 @@
+title: Video File
+
+accept: video/*
+
+options:
+  delete:
+    *: true
+  replace:
+    *: true
+  update:
+    *: true
+  sortable: true

@@ -1,0 +1,35 @@
+Title: Bear #32: A/PART
+
+----
+
+Year: 2021
+
+----
+
+Category: Web application
+
+----
+
+Client: Orlo
+
+----
+
+Role: Design, web development
+
+----
+
+Dimensions: —
+
+----
+
+Links:
+
+- 
+  title: bear.orlo.org
+  target:
+    type: url
+    value: https://bear.orlo.org/
+
+----
+
+Blocks: []

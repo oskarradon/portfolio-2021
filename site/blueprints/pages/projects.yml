@@ -1,0 +1,15 @@
+title: Projects
+sections:
+  drafts:
+    extends: sections/projectlist
+    headline: Drafts
+    status: draft
+
+  unlisted:
+    extends: sections/projectlist
+    headline: Unlisted
+    status: unlisted
+
+  published:
+    extends: sections/projectlist
+    status: listed

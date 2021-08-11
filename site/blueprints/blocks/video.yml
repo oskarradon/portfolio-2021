@@ -1,0 +1,31 @@
+name: field.blocks.video.name
+icon: video
+preview: video
+fields:
+  location:
+    # label: field.blocks.video.location
+    type: radio
+    columns: 2
+    default: "kirby"
+    options:
+      kirby: Kirby
+      web: Web
+  video:
+    # label: field.blocks.video.name
+    type: files
+    multiple: false
+    image:
+      back: black
+    uploads:
+      template: video
+    when:
+      location: kirby
+  source:
+    # label: field.blocks.video.url
+    type: url
+    when:
+      location: web
+  caption:
+    label: field.blocks.video.caption
+    type: writer
+    inline: true

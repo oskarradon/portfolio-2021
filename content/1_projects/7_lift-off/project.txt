@@ -1,0 +1,35 @@
+Title: Lift Off
+
+----
+
+Year: 2020
+
+----
+
+Category: Web application
+
+----
+
+Client: PNCA Graphic Design BFA
+
+----
+
+Role: Design, front-end development
+
+----
+
+Dimensions: —
+
+----
+
+Links:
+
+- 
+  title: liftoffpnca.com
+  target:
+    type: url
+    value: https://liftoffpnca.com
+
+----
+
+Blocks: []

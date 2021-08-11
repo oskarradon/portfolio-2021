@@ -1,0 +1,37 @@
+Title: Patterning
+
+----
+
+Year: 2020
+
+----
+
+Category: Publication
+
+----
+
+Client: Ophir El-Boher
+
+----
+
+Role: Design
+
+----
+
+Dimensions: 4x5in
+
+----
+
+Links:
+
+- 
+  title: >
+    patterning.fullerrosen.com/Book-and-Video
+  target:
+    type: url
+    value: >
+      https://patterning.fullerrosen.com/Book-and-Video
+
+----
+
+Blocks: []

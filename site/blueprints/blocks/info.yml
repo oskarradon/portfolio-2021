@@ -1,0 +1,44 @@
+name: Info
+icon: question
+fields:
+  year:
+    type: text
+    display: YYYY
+    width: 1/2
+  category:
+    type: tags
+    width: 1/2
+    # max: 1
+    options:
+      - Publication
+      - Web application
+      - Poster
+      - Branding
+      - Other Work
+  client:
+    type: text
+    width: 1/2
+    default: "—"
+  role:
+    type: text
+    width: 1/2
+    default: "—"
+  dimensions:
+    type: text
+    width: 1/2
+    default: "—"
+  links:
+    type: structure
+    fields:
+      title:
+        type: text
+        default: "—"
+      target:
+        type: link
+        label: Link
+        options:
+          - url
+          - tel
+          - email
+          # - file
+        settings: false

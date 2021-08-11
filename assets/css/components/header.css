@@ -1,0 +1,45 @@
+/* nav a.active {
+  text-decoration: underline;
+} */
+
+/* header a.logo:hover {
+  border: none;
+} */
+
+/* header a.logo {
+  color: var(--text2);
+  font-size: 100px;
+  letter-spacing: -0.3rem;
+} */
+
+header article,
+header #education {
+  display: flex;
+  justify-content: space-between;
+}
+
+header #more-info {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  /* Set our transitions up. */
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: all 0.5s ease-in-out;
+}
+
+header #more-info.showing {
+  /* Initially we don't want any height, and we want the contents to be hidden */
+
+  max-height: 1800px;
+  opacity: 1;
+}
+
+@media (min-width: 800px) {
+  header #more-info {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1.2fr;
+    gap: 6em;
+  }
+}

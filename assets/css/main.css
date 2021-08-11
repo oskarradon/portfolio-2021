@@ -1,0 +1,10 @@
+@import "vendor/normalize.css";
+@import "vendor/basicLightbox.min.css";
+
+@import "components/header.css";
+@import "components/footer.css";
+
+@import "global/vars.css";
+@import "global/typography.css";
+
+@import "templates/default.css";

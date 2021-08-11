@@ -1,0 +1,21 @@
+title: Site
+
+columns:
+  - width: 2/3
+    sections:
+      drafts:
+        headline: Section Drafts
+        type: pages
+        status: draft
+        templates: default
+        # help: Use the plus button on the top right to add a new Section
+
+      published:
+        headline: Published Sections
+        type: pages
+        status: listed
+
+      projects:
+        extends: sections/projectlist
+
+        status: listed

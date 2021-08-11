@@ -1,0 +1,35 @@
+Title: Toward a New Agency
+
+----
+
+Year: 2020
+
+----
+
+Category: Web application
+
+----
+
+Client: —
+
+----
+
+Role: Design, illustration, front-end development
+
+----
+
+Dimensions: —
+
+----
+
+Links:
+
+- 
+  title: oskarradon.com/thesis
+  target:
+    type: url
+    value: https://oskarradon.com/thesis
+
+----
+
+Blocks: []

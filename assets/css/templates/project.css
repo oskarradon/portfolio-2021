@@ -1,0 +1,23 @@
+article.gallery {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+article figure {
+  margin: 0;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#project article p {
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

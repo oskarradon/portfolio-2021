@@ -1,0 +1,29 @@
+Title: Flash
+
+----
+
+Year: 2019
+
+----
+
+Category: Publication
+
+----
+
+Client: —
+
+----
+
+Role: Design, writing, illustration
+
+----
+
+Dimensions: 8x10in
+
+----
+
+Links: 
+
+----
+
+Blocks: [{"content":{"text":"<p>This book is about the future of rock climbing. In this project I was interested in exploring the ways that climbing has progressed and is progressing. Leaps in technology have allowed inhuman feats to become possible, and the people pulling off these feats are younger and younger. While climbing is a personal story of progression and pushing oneself to the limit, there are also beautiful communities created via the internet, welcoming new people to the sport who have previously found it unwelcoming. The future of climbing is bright, and I mirror that brightness in the hopeful tone of this book.<\/p>"},"id":"36395b45-6bbf-4a2e-971f-fb1198c230d7","isHidden":false,"type":"text"},{"content":{"columns":3,"lightbox":"false","images":[]},"id":"5164edf9-3c99-4b65-9f72-11c2cdda8863","isHidden":false,"type":"gallery"}]

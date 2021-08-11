@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Reglo";
+  src: url("/thesis-2020/assets/fonts/Reglo-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Whois";
+  src: url("/thesis-2020/assets/fonts/whois-mono.ttf") format("truetype");
+}
+
+h2 {
+  font-family: "Reglo", Arial, sans-serif;
+  font-size: 38px;
+  font-weight: normal;
+  /* letter-spacing: .04rem; */
+}
+
+p, h2 span, a, ul li, li::marker {
+  font-family: "Whois", Courier, monospace;
+  font-size: 22px;
+  line-height: 1.8rem;
+}
+
+ul li {
+  line-height: 1.4rem;
+}

@@ -1,0 +1,35 @@
+name: field.blocks.gallery.name
+icon: dashboard
+preview: gallery
+fields:
+  columns:
+    label: Number of columns
+    type: range
+    step: 1
+    min: 1
+    max: 12
+    after: columns
+    default: 3
+    width: 1/2
+  gap:
+    type: gap
+    width: 1/4
+  lightbox:
+    label: Enable lightbox?
+    type: toggle
+    default: "Yes"
+    text:
+      - "No"
+      - "Yes"
+    width: 1/4
+  images:
+    label: field.blocks.gallery.images.label
+    type: files
+    multiple: true
+    layout: cards
+    size: tiny
+    empty: field.blocks.gallery.images.empty
+    uploads:
+      template: galleryfile
+    image:
+      ratio: 1/1
