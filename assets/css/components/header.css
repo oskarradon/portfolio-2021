@@ -39,6 +39,14 @@ header #more-info.showing {
 @media (min-width: 800px) {
   header #more-info {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6em;
+  }
+}
+
+@media (min-width: 1600px) {
+  header #more-info {
+    display: grid;
     grid-template-columns: 1fr 0.8fr 1.2fr;
     gap: 6em;
   }
