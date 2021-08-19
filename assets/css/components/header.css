@@ -12,13 +12,13 @@
   letter-spacing: -0.3rem;
 } */
 
-header article,
-header #education {
+header#main-header article,
+header#main-header #education {
   display: flex;
   justify-content: space-between;
 }
 
-header #more-info {
+header#main-header #more-info {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -29,7 +29,7 @@ header #more-info {
   transition: all 0.5s ease-in-out;
 }
 
-header #more-info.showing {
+header#main-header #more-info.showing {
   /* Initially we don't want any height, and we want the contents to be hidden */
 
   max-height: 1800px;
@@ -37,7 +37,7 @@ header #more-info.showing {
 }
 
 @media (min-width: 800px) {
-  header #more-info {
+  header#main-header #more-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 6em;
@@ -45,7 +45,7 @@ header #more-info.showing {
 }
 
 @media (min-width: 1600px) {
-  header #more-info {
+  header#main-header #more-info {
     display: grid;
     grid-template-columns: 1fr 0.8fr 1.2fr;
     gap: 6em;
