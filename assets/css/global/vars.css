@@ -1,21 +1,29 @@
 :root {
-  --bg: #eeeeee;
-  --text1: #231f20;
-  --text2: #c5c5c5;
-  --text-link: #89b3ff;
-  --wrapper-bg: rgb(243, 243, 243);
-  --columns: 3;
-  --multiplier: 1;
-}
+  --bg: #ecece9;
+  --text1: #3a3a3a;
+  --text2: #b1b1ab;
+  --text-link: #8baeee;
+  --link-active: #c2d6fa;
+  --wrapper-bg: #e5e5e2;
+  --hr: #d1d0d0;
+  --selection: #d8e6ff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #242424;
-    --text1: #e0e0e0;
-    --text2: #6d6d6d;
-    --text-link: #89b3ff;
-    --wrapper-bg: #3d3d3d;
-  }
+  /* plyr styles */
+
+  --plyr-color-main: var(--wrapper-bg);
+  --plyr-font-family: "Untitled Sans", Arial, Helvetica, sans-serif;
+  --plyr-tooltip-color: var(--text1);
+  --plyr-tooltip-radius: 30px;
+  --plyr-tooltip-shadow: 0 0 2px var(--text1);
+  --plyr-tooltip-arrow-size: 0px;
+  --plyr-audio-control-color: var(--text1);
+  --plyr-menu-color: var(--text1);
+  --plyr-menu-item-arrow-color: var(--text1);
+  --plyr-range-thumb-shadow: 0 0 2px var(--text1);
+  --plyr-video-progress-buffered-background: var(--wrapper-bg);
+  --plyr-range-thumb-active-shadow-width: 0px;
+  --plyr-range-track-height: 6px;
+  --plyr-range-thumb-height: 15px;
 }
 
 @media (min-width: 576px) {
