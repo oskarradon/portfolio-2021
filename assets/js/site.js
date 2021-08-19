@@ -20,3 +20,46 @@ function mainNavToggle() {
 
 // Add a click event to run the mainNavToggle function
 navToggle.addEventListener("click", mainNavToggle);
+
+// * * * * * * *
+// IMAGE GALLERY
+// * * * * * * *
+
+// Exhibition page uses Swiper library: https://swiperjs.com/
+
+const swiper = new Swiper(".swiper-container", {
+  keyboard: {
+    enabled: true,
+  },
+  // spaceBetween: 30,
+  speed: 500,
+  slidesPerView: 2.5,
+  spaceBetween: 100,
+  centeredSlides: true,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+hljs.highlightAll();
+
+const players = Array.from(document.querySelectorAll(".player")).map(
+  (p) =>
+    new Plyr(p, {
+      controls: [
+        "play-large",
+        "play",
+        "progress",
+        "current-time",
+        "mute",
+        "volume",
+        // "captions",
+        // "settings",
+        // "pip",
+        // "airplay",
+        // "fullscreen",
+      ],
+    })
+);
