@@ -1,6 +1,26 @@
+html {
+  color: var(--text1);
+  background: var(--bg);
+}
+
 #container {
   margin: 0 auto;
   max-width: 1500px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  color: var(--text2);
+  background-color: var(--selection);
+}
+
+/* for firefox */
+::moz-selection {
+  color: var(--text2);
+  background-color: var(--selection);
 }
 
 body {
@@ -45,6 +65,11 @@ article {
 nav {
   display: grid;
   justify-items: left;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--text1);
+  box-shadow: inset 0 0 0 2px var(--bg);
 }
 
 @media (min-width: 800px) {
