@@ -1,0 +1,97 @@
+/*!
+  Uses highlight.js: https://highlightjs.org/
+  Based off of: Atelier Cave Light by Bram de Haan (http://atelierbramdehaan.nl)
+*/
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+code.hljs {
+  padding: 3px 5px;
+}
+.hljs {
+  color: var(--text1);
+  background: var(--wrapper-bg);
+}
+.hljs ::selection {
+  color: #879292;
+}
+.hljs-comment {
+  color: var(--text2);
+}
+.hljs-tag {
+  color: #655f6d;
+}
+.hljs-operator,
+.hljs-punctuation,
+.hljs-subst {
+  color: #585260;
+}
+.hljs-operator {
+  opacity: 0.7;
+}
+.hljs-bullet,
+.hljs-deletion,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-template-variable,
+.hljs-variable {
+  color: #eb856c;
+}
+.hljs-attr,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-symbol,
+.hljs-variable.constant_ {
+  color: #cf9886;
+}
+.hljs-class .hljs-title,
+.hljs-title,
+.hljs-title.class_ {
+  color: #be864d;
+}
+.hljs-strong {
+  font-weight: 700;
+  color: #a06e3b;
+}
+.hljs-addition,
+.hljs-code,
+.hljs-string,
+.hljs-title.class_.inherited__ {
+  color: #4fb4b4;
+}
+.hljs-built_in,
+.hljs-doctag,
+.hljs-keyword.hljs-atrule,
+.hljs-quote,
+.hljs-regexp {
+  color: #398bc6;
+}
+.hljs-attribute,
+.hljs-function .hljs-title,
+.hljs-section,
+.hljs-title.function_,
+.ruby .hljs-property {
+  color: #758bf5;
+}
+.diff .hljs-meta,
+.hljs-keyword,
+.hljs-template-tag,
+.hljs-type {
+  color: #a270e7;
+}
+.hljs-emphasis {
+  color: #955ae7;
+  font-style: italic;
+}
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string {
+  color: #df98df;
+}
+.hljs-meta .hljs-keyword,
+.hljs-meta-keyword {
+  font-weight: 700;
+}
