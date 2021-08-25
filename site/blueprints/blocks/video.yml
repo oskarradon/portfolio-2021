@@ -3,7 +3,7 @@ icon: video
 preview: video
 fields:
   location:
-    # label: field.blocks.video.location
+    label: field.blocks.video.location
     type: radio
     columns: 2
     default: "kirby"
@@ -11,21 +11,31 @@ fields:
       kirby: Kirby
       web: Web
   video:
-    # label: field.blocks.video.name
+    label: field.blocks.video.name
     type: files
     multiple: false
     image:
       back: black
     uploads:
-      template: video
+      template: blocks/video
     when:
       location: kirby
-  source:
-    # label: field.blocks.video.url
-    type: url
+  youtube:
+    label: Youtube Video ID
+    type: text
+    when:
+      location: web
+  vimeo:
+    label: Vimeo Video ID
+    type: text
     when:
       location: web
   caption:
     label: field.blocks.video.caption
     type: writer
+    icon: text
     inline: true
+  # link:
+  #   label: field.blocks.video.link
+  #   type: text
+  #   icon: url
