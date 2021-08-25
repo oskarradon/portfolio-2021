@@ -8,6 +8,10 @@
   --hr: #d1d0d0;
   --selection: #d8e6ff;
 
+  /* variable used for spacing */
+
+  --multiplier: 1.5;
+
   /* plyr styles */
 
   --plyr-color-main: var(--wrapper-bg);
@@ -26,9 +30,9 @@
   --plyr-range-thumb-height: 15px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 800px) {
   :root {
-    --multiplier: 2;
+    --multiplier: 2.5;
   }
 }
 
