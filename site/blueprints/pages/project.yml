@@ -1,76 +1,87 @@
 title: Project
-sections:
-  hero:
-    type: files
-    size: medium
-    max: 1
-    layout: cards
-    template: galleryfile
-  content:
-    type: fields
-    fields:
-      year:
-        type: text
-        display: YYYY
-        width: 1/2
-      category:
-        type: tags
-        width: 1/2
-        # max: 1
-        options:
-          - Publication
-          - Web application
-          - Poster
-          - Branding
-          - Other Work
-      client:
-        type: text
-        width: 1/2
-        default: "—"
-      role:
-        type: text
-        width: 1/2
-        default: "—"
-      dimensions:
-        type: text
-        width: 1/2
-        default: "—"
-      links:
-        type: structure
-        width: 1/2
+columns:
+  - width: 2/3
+    sections:
+    # sections in the left column
+      content:
+        type: fields
+        fields: 
+          tagline:
+            type: text
+            required: true
+          blocks:
+            type: blocks # For more info: https://getkirby.com/docs/reference/panel/fields/blocks
+            fieldsets:
+              # overrides to default blocks found in /site/blueprints/blocks
+              - heading
+              - text
+              - image
+              - gallery
+              - video
+              - code
+              carousel:
+                icon: layers
+                fields:
+                  images:
+                    type: files
+                    multiple: true
+                    layout: cards
+                    size: tiny
+                    uploads:
+                      template: blocks/image
+                    image:
+                      ratio: 1/1
+  - width: 1/3
+    sticky: true
+    sections:
+    # sections in the right column
+      info:
+        type: fields
         fields:
-          title:
+          cover:
+            type: files
+            size: large
+            max: 1
+            required: true
+            layout: cards
+            template: hero
+            help: This image or video is shown on the front page
+          year:
+            type: date
+            display: MM/YYYY
+          category:
+            type: tags
+            max: 1
+            required: true
+            options:
+              - Publication
+              - Web application
+              - Poster
+              - Branding
+              - Other Work
+          client:
             type: text
             default: "—"
-          target:
-            type: link
-            label: Link
-            options:
-              - url
-              - tel
-              - email
-              # - file
-            settings: false
-
-      blocks:
-        type: blocks # For more info: https://getkirby.com/docs/reference/panel/fields/blocks
-        fieldsets:
-          # overrides to default blocks found in /site/blueprints/blocks
-          - heading
-          - text
-          - image
-          - gallery
-          - video
-          - info
-          slider:
-            icon: layers
+          role:
+            type: text
+            default: "—"
+          dimensions:
+            type: text
+            width: 1/2
+            default: "—"
+          links:
+            type: structure
             fields:
-              images:
-                type: files
-                multiple: true
-                layout: cards
-                size: tiny
-                uploads:
-                  template: blocks/image
-                image:
-                  ratio: 1/1
+              title:
+                type: text
+                default: "—"
+              target:
+                type: link
+                label: Link
+                options:
+                  - url
+                  - tel
+                  - email
+                  # - file
+                settings: false
+
