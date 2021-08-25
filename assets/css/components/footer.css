@@ -1,7 +1,22 @@
 footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  margin-top: calc(1em * var(--multiplier));
+}
+
+footer nav {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+footer nav a {
+  display: block;
+  justify-self: flex-end;
+}
+
+#arena,
+#fish {
+  display: none;
 }
 
 footer p {
@@ -9,4 +24,25 @@ footer p {
   align-self: end;
   margin: 0;
   max-width: 100%;
+}
+
+@media (min-width: 600px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer nav {
+    display: block;
+  }
+
+  footer nav a {
+    display: inline;
+    text-align: left;
+  }
+
+  #arena,
+  #fish {
+    display: inline;
+  }
 }
