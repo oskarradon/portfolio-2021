@@ -6,7 +6,7 @@
     <?php if ($page->isHomePage()): ?>
       <title><?= $site->title() ?></title>
     <?php else: ?>
-      <title><?= $page->seoTitle()->or($page->title()) ?> | <?= $site->title() ?></title>
+      <title><?= $page->seoTitle()->or($page->title()) ?> – <?= $site->title() ?></title>
     <?php endif ?>
 
     <meta name="description" content="">
@@ -42,10 +42,12 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- Vendor stylesheets -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
 
     <!-- Author stylesheets -->
     <?= css('/assets/css/main.css') ?>
+    <?= css('/assets/css/components/code-highlight.css') ?>
     <?php echo css('@auto') ?> <!-- looks for stylesheet with same name as template in /assets/css/templates -->
 
     <meta name="theme-color" content="#fafafa">
@@ -54,56 +56,65 @@
 
   <body>
     <div id="container">
-      <header>
+      <header id="main-header">
         <article>
           <div>
             <a href="<?= $site->url() ?>" class="logo"><?= $site->title() ?></a>
           </div>
-          <nav>
-          <?php
-            $links = $pages->listed()->not('projects');
-            if($links->isNotEmpty()):
-          ?>
-            <?php foreach($links as $link): ?>
-              <a target=”_blank” <?php e($link->isOpen(), ' class="active"') ?> href="<?= $link->url() ?>">
-                <?= $link->title()->html() ?>
-              </a>
-            <?php endforeach ?>
-            <?php endif ?>
-            <a target=”_blank” href="https://drive.google.com/file/d/1GkWWJlD6PRX8cvCIX1HM7SH2SkPo3-Xo/view?usp=sharing">PDF Portfolio</a>
-            <a href="#" id="about">About</a>
-            <a target=”_blank” href="https://read.cv/oskar">CV</a>
+          <nav id="main-nav">
+              <!-- <?php $links = $pages->listed()->not('projects');
+                if($links->isNotEmpty()):
+              ?>
+                <?php foreach($links as $link): ?>
+                  <a target=”_blank” <?php e($link->isOpen(), ' class="active"') ?> href="<?= $link->url() ?>">
+                    <?= $link->title()->html() ?>
+                  </a>
+                <?php endforeach ?>
+              <?php endif ?> -->
+              <a href="#" id="about-toggle">About</a>
           </nav>
-          
         </article>
-        <div id="more-info">
+        <div id="more-info" class="toggle">
           <div>
-            <h3>About</h3>
-            <p>I'm a designer and front-end developer from Portland, OR. I specialize in publications, branding, and web applications.</p>
+            <small>About</small>
+            <?= $site->about()->kt() ?>
           </div>
           <div>
-            <h3>Selected clients</h3>
-            <p>Yale Union, Orchard47, Esperanza Spalding, Portland Institute for Contemporary Art, Sequence Press, WebMD Health Services, Pacific Northwest College of Art</p>
+            <small>Selected clients</small>
+            <?= $site->clients()->kt() ?>
           </div>
           <div id="education">
             <div>
-              <h3>Education</h3>
-              <p>BFA Graphic Design<br>
-              Web development Certificate<br>
-              UX Design Certificate</p>
+              <small>Education</small>
+              <?php $items = $site->education()->toStructure();
+              foreach ($items as $item): ?>
+                <?= $item->degree()->kt() ?>
+              <?php endforeach ?>
             </div>
             <div>
-              <h3>Issuing institution</h3>
-              <p>PNCA<br>
-              Epicodus<br>
-              Hack Oregon</p>
+              <small>Institution</small>
+              <?php foreach ($items as $item): ?>
+                <?= $item->institution()->kt() ?>
+              <?php endforeach ?>
             </div>
             <div>
-              <h3>Year</h3>
-              <p>2020<br>
-              2016<br>
-              2016</p>
+              <small>Year</small>
+              <?php foreach ($items as $item): ?>
+                <p><?= $item->year()->toDate('Y') ?></p>
+              <?php endforeach ?>
             </div>
           </div>
-            </div>
+        </div>
+
+        <!-- <nav id="project-nav">
+          <?php $projects = $site->page('projects')->children();
+            if($projects->isNotEmpty()):
+              foreach($projects as $project): ?>
+              <input type="checkbox">
+                <?= $project->category() ?>
+              </input>
+            <?php endforeach ?>
+          <?php endif ?>
+        </nav> -->
       </header>
+
