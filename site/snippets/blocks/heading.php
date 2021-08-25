@@ -1,1 +1,2 @@
-<<?= $level = $block->level()->or('h2') ?>><?= $block->text() ?></<?= $level ?>>
+<?php /** @var \Kirby\Cms\Block $block */ ?>
+<h5><?= $block->text() ?></h5>
