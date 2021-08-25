@@ -153,17 +153,13 @@ small {
   margin-bottom: 0.1em;
 }
 
-/*///////////////////////
-Other typographic details  
-///////////////////////*/
+/* -------- Other typographic details -------- */
 
 hr {
   border: 1px solid var(--hr);
 }
 
-/*///////////
-media queries
-///////////*/
+/* -------- media queries -------- */
 
 @media (min-width: 600px) {
   h1 {
