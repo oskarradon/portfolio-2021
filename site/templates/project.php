@@ -1,4 +1,5 @@
 <?php snippet('header'); ?>
+
 <main id="project">
 
   <header class="project-header">
@@ -7,13 +8,16 @@
   </header>
   
   <?= $page->blocks()->toBlocks() ?>
+
   <nav id="prev-next">
     <?php if ($page->hasPrevListed()): ?>
-      <a id="prev" href="<?= $page->prevListed()->url() ?>">Previous project</a>
+      <a id="prev" href="<?= $page->prevListed()->url() ?>">
+      <?= asset('assets/icons/arrow-left.svg')->read() ?>Previous<span>&nbsp;project</span></a>
     <?php endif ?>
 
     <?php if ($page->hasNextListed()): ?>
-      <a id="next" href="<?= $page->nextListed()->url() ?>">Next project</a>
+      <a id="next" href="<?= $page->nextListed()->url() ?>">Next<span>&nbsp;project</span><?= asset('assets/icons/arrow-right.svg')->read() ?></a>
+      
     <?php endif ?>
   </nav>
 
@@ -63,6 +67,5 @@
   </article>
 
 </main>
-
 
 <?php snippet('footer'); ?>
