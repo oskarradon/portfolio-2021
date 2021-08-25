@@ -1,25 +1,14 @@
-// import * as basicLightbox from "/assets/js/vendor/basicLightbox.min.js";
-
-for (const lightbox of document.querySelectorAll(".lightbox")) {
-  lightbox.onclick = () => {
-    basicLightbox.create(lightbox.innerHTML).show();
-  };
-}
-
 document.querySelector("footer p span").innerHTML = new Date().getFullYear();
 
-/* Toggle Nav with Raw JavaScript */
-// Set variables for key elements
-var mainNav = document.getElementById("more-info");
-var navToggle = document.getElementById("about");
+document.getElementById("about-toggle").addEventListener("click", function () {
+  document.getElementById("more-info").classList.toggle("showing");
+});
 
-// Establish a function to toggle the class "collapse"
-function mainNavToggle() {
-  mainNav.classList.toggle("showing");
-}
-
-// Add a click event to run the mainNavToggle function
-navToggle.addEventListener("click", mainNavToggle);
+// document
+//   .getElementById("footer-nav-toggle")
+//   .addEventListener("click", function () {
+//     document.querySelector("footer nav").classList.toggle("showing");
+//   });
 
 // * * * * * * *
 // IMAGE GALLERY
@@ -27,19 +16,26 @@ navToggle.addEventListener("click", mainNavToggle);
 
 // Exhibition page uses Swiper library: https://swiperjs.com/
 
-const swiper = new Swiper(".swiper-container", {
+const swiper = new Swiper(".swiper", {
   keyboard: {
     enabled: true,
   },
-  // spaceBetween: 30,
+  slidesPerView: 1.5,
+  spaceBetween: 20,
   speed: 500,
-  slidesPerView: 2.5,
-  spaceBetween: 100,
-  centeredSlides: true,
+  centeredSlides: false,
   grabCursor: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  breakpoints: {
+    600: {
+      spaceBetween: 40,
+    },
+    1024: {
+      spaceBetween: 100,
+    },
   },
 });
 
@@ -57,7 +53,7 @@ const players = Array.from(document.querySelectorAll(".player")).map(
         "volume",
         // "captions",
         // "settings",
-        // "pip",
+        "pip",
         // "airplay",
         // "fullscreen",
       ],
