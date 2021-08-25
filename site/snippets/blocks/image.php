@@ -12,13 +12,13 @@ if ($block->location() == 'web') {
     $src = $block->src();
 } elseif ($image = $block->image()->toFile()) {
     $alt = $alt ?? $image->alt();
-    $src = $image->url();
+    $src = $image->resize(1500)->url();
 }
 
 ?>
 <?php if ($src): ?>
   <article>
-    <figure<?= attr(['data-ratio' => $ratio, 'data-crop' => $crop], ' ') ?>>
+    <figure class="image-block" <?= attr(['data-ratio' => $ratio, 'data-crop' => $crop], ' ') ?>>
       <?php if ($link->isNotEmpty()): ?>
       <a href="<?= $link->toUrl() ?>">
         <img src="<?= $src ?>" alt="<?= $alt ?>">
