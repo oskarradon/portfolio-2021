@@ -67,6 +67,18 @@
   align-items: center;
 }
 
+span.category,
+span.year {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  span.category,
+  span.year {
+    display: block;
+  }
+}
+
 @media (min-width: 800px) {
   #projects figure .img-wrapper {
     background: var(--wrapper-bg);
