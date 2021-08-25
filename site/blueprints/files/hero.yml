@@ -1,0 +1,18 @@
+title: Hero file
+
+accept: image/*, video/*
+
+options:
+  delete:
+    *: true
+  replace:
+    *: true
+  update:
+    *: true
+  sortable: true
+
+fields:
+  alt:
+    width: 1/2
+    label: Alt text
+    type: textarea
