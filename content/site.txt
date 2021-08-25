@@ -1,1 +1,42 @@
 Title: Oskar Radon
+
+----
+
+About: I'm a designer and front-end developer from Portland, OR. I specialize in publications, branding, and web applications. (link: https://read.cv/oskar text: View my CV), or (email: oskarradonkimball@gmail.com text: email me) to request a PDF portfolio.
+
+----
+
+Clients: Yale Union, Orchard47, Esperanza Spalding, Davina Semo, Portland Institute for Contemporary Art, Sequence Press, WebMD.
+
+----
+
+Education:
+
+- 
+  degree: BFA Graphic Design
+  institution: PNCA
+  year: 2018-11-30
+- 
+  degree: Web development Certificate
+  institution: Epicodus
+  year: 2014-11-30
+- 
+  degree: UX Design Certificate
+  institution: Hack Oregon
+  year: 2014-11-30
+
+----
+
+Emails:
+
+- 
+  email: d2d.esperanza@gmail.com
+
+----
+
+Mystructure:
+
+- 
+  title: asdf
+  images: asd
+  price: dd
