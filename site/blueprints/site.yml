@@ -1,21 +1,56 @@
 title: Site
 
-columns:
-  - width: 2/3
-    sections:
-      drafts:
-        headline: Section Drafts
-        type: pages
-        status: draft
-        templates: default
-        # help: Use the plus button on the top right to add a new Section
-
-      published:
-        headline: Published Sections
-        type: pages
-        status: listed
-
-      projects:
-        extends: sections/projectlist
-
-        status: listed
+tabs:
+  content:
+    label: Content
+    icon: text
+    columns:
+      - width: 2/3
+        sections:
+          drafts:
+            headline: Section Drafts
+            type: pages
+            status: draft
+            templates: default
+            # help: Use the plus button on the top right to add a new Section
+          published:
+            headline: Published Sections
+            type: pages
+            status: listed
+          projects:
+            extends: sections/projectlist
+            status: listed
+  info:
+    icon: search
+    columns:
+      - width: 1
+        sections:
+          info:
+            type: fields
+            fields:
+              about:
+                type: textarea
+                width: 1/3
+              clients:
+                type: textarea
+                width: 1/3
+              education:
+                type: structure
+                width: 1/3
+                columns:
+                  degree:
+                    width: 3/6
+                  institution:
+                    width: 2/6
+                  year:
+                    width: 1/6
+                    align: right
+                fields:
+                  degree:
+                    type: text
+                  institution:
+                    type: text
+                  year:
+                    type: date
+                    display: YYYY
+                    step: year
