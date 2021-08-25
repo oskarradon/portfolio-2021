@@ -7,20 +7,13 @@ fields:
     type: range
     step: 1
     min: 1
-    max: 12
-    after: columns
-    default: 3
+    max: 6
+    # after: columns
+    default: 2
     width: 1/2
+    required: true
   gap:
     type: gap
-    width: 1/4
-  lightbox:
-    label: Enable lightbox?
-    type: toggle
-    default: "Yes"
-    text:
-      - "No"
-      - "Yes"
     width: 1/4
   images:
     label: field.blocks.gallery.images.label
@@ -30,6 +23,6 @@ fields:
     size: tiny
     empty: field.blocks.gallery.images.empty
     uploads:
-      template: galleryfile
+      template: image
     image:
       ratio: 1/1
