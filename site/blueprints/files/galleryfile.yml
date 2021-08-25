@@ -1,4 +1,4 @@
-title: Gallery file
+title: Carousel file
 
 accept: image/*, video/*
 
@@ -10,3 +10,9 @@ options:
   update:
     *: true
   sortable: true
+
+fields:
+  alt:
+    width: 1/2
+    label: Alt text
+    type: textarea
